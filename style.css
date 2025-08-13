@@ -1,0 +1,28 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Cores:*/
+:root {
+    --VerdeFloresta: #014040;
+    --VerdeClaro: #02735E;
+    --VerdeLeve: #03A678;
+    --LaranjaForte: #F27405;
+    --VermelhoFogo: #731702;
+}
+
+body {
+    font-family: Arial, sans-serif; 
+    line-height: 1.5;            
+}
+
+h1 {
+    color: var(--VermelhoFogo);
+}
+
+#action {
+    color: var(--LaranjaForte);
+}
