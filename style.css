@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Reset */
 * {
     margin: 0;
@@ -15,14 +17,36 @@
 }
 
 body {
-    font-family: Arial, sans-serif; 
+    background-color: var(--VerdeFloresta);
+    font-family: "Montserrat", Arial, sans-serif; 
     line-height: 1.5;            
 }
 
 h1 {
     color: var(--VermelhoFogo);
+    font-size: 4rem;
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 800;
+    text-align: left;
+}
+
+h2 {
+    color: var(--VerdeLeve);
+    font-family: "Montserrat", Arial, sans-serif;
+    font-weight: 600;
+    border: 3px solid var(--VerdeClaro);
+    border-radius: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none; /* Faz os itens ficarem lado a lado */
+    justify-content: center; /* Centraliza o menu horizontalmente */
+    gap: 3rem; /* Espaço entre os itens */
 }
 
 #action {
     color: var(--LaranjaForte);
 }
+
+/* falta criar as páginas e criar os endereços pro href funcionar*/
