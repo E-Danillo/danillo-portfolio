@@ -9,7 +9,7 @@
 
 /*Cores:*/
 :root {
-    --VerdeFloresta: #014040;
+    --VerdeFloresta: #002F1F;
     --VerdeClaro: #02735E;
     --VerdeLeve: #03A678;
     --LaranjaForte: #F27405;
@@ -23,30 +23,78 @@ body {
 }
 
 h1 {
+    display: inline-block;
     color: var(--VermelhoFogo);
-    font-size: 4rem;
+    font-size: 6rem;
     font-family: "Montserrat", Arial, sans-serif;
     font-weight: 800;
     text-align: left;
 }
 
+header {
+    text-align: center;
+}
+
 h2 {
+    display: inline-block;
+    margin-top: 45px;
     color: var(--VerdeLeve);
     font-family: "Montserrat", Arial, sans-serif;
     font-weight: 600;
     border: 3px solid var(--VerdeClaro);
     border-radius: 10px;
+    padding: 10px 15px;
 }
 
 nav ul {
     display: flex;
+    font-size: 20px;
+    color: var(--VerdeFloresta);
+    padding: 30px;
+    background-color: var(--LaranjaForte);
     list-style: none; /* Faz os itens ficarem lado a lado */
     justify-content: center; /* Centraliza o menu horizontalmente */
     gap: 3rem; /* Espaço entre os itens */
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: var(--VermelhoFogo);
+}
+
+section {
+    padding: 50px 20px;
+    text-align: center;
 }
 
 #action {
     color: var(--LaranjaForte);
 }
 
-/* falta criar as páginas e criar os endereços pro href funcionar*/
+p {
+    font-size: 1.2rem;    
+}
+
+.botao {
+    font-size: 1.5rem;
+}
+
+.icon {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: #02735E 4px dashed;
+    display: block;
+    margin: 20px auto;
+}
+
+/*
+Título: 6rem
+h2: 3rem 
+
+OBS: falta criar as páginas e criar os endereços pro href funcionar
+
+*/
