@@ -35,11 +35,16 @@ h1 {
     text-align: left;
 }
 
+h2 {
+    font-size: 3rem;
+    color: var(--VerdeClaro)
+}
+
 header {
     text-align: center;
 }
 
-h2 {
+#apresentacao {
     display: inline-block;
     margin-top: 45px;
     color: var(--VerdeLeve);
@@ -56,9 +61,9 @@ nav ul {
     font-weight: 600;
     padding: 30px;
     background-color: var(--LaranjaForte);
-    list-style: none; /* itens lado a lado */
+    list-style: none; 
     justify-content: center; 
-    gap: 6rem; /* Espaço entre os itens */
+    gap: 6rem; 
 }
 
 nav a {
@@ -88,7 +93,7 @@ section {
 }
 
 p {
-    color: var(--LaranjaForte);
+    color: whitesmoke;
     font-size: 1.2rem;
     padding: 20px 20px 30px 20px;
 }
@@ -102,7 +107,7 @@ p {
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
-    color: var(--VerdeLeve); /* cor do texto do botão */
+    color: var(--VerdeLeve); 
     background-color: transparent;
     transition: background 0.3s, transform 0.2s, color 0.3s;
 }
@@ -126,10 +131,3 @@ p {
     display: block;
     margin: 20px auto;
 }
-
-/*
-Título: 6rem
-h2: 3rem 
-
-OBS: falta criar as páginas e criar os endereços pro href funcionar
-*/
