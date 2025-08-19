@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Ancizar+Serif:ital,wght@0,300..900;1,300..900&family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Reset */
 * {
@@ -27,12 +27,11 @@ body {
 }
 
 h1 {
-    display: inline-block;
+    display: block;
     color: var(--VermelhoFogo);
     font-size: 5rem;
-    font-family: "Montserrat", Arial, sans-serif;
     font-weight: 800;
-    text-align: left;
+    text-align: center;
 }
 
 h2 {
@@ -48,7 +47,6 @@ header {
     display: inline-block;
     margin-top: 45px;
     color: var(--VerdeLeve);
-    font-family: "Montserrat", Arial, sans-serif;
     font-weight: 600;
     border: 3px solid var(--VerdeClaro);
     border-radius: 10px;
@@ -57,6 +55,7 @@ header {
 
 nav ul {
     display: flex;
+    flex-direction: row;
     font-size: 20px;
     font-weight: 600;
     padding: 30px;
@@ -95,7 +94,11 @@ section {
 p {
     color: whitesmoke;
     font-size: 1.2rem;
-    padding: 20px 20px 30px 20px;
+    padding: 20px 20px 30px;
+}
+
+footer {
+    text-align: center;
 }
 
 .botao {
@@ -125,9 +128,35 @@ p {
 }
 
 .icon {
-    max-width: 20%; height: auto;
+    max-width: 200px; width: 100%; height: auto;
     border-radius: 50%;
     border: #02735E 4px dashed;
     display: block;
     margin: 20px auto;
+}
+
+/* Responsividade para celular */
+@media (max-width: 768px) {
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .icon {
+        max-width: 50%;
+    }
+}
+
+/* Acessibilidade */
+a:focus, .botao:focus {
+    outline: 3px solid var(--VerdeClaro);
 }
