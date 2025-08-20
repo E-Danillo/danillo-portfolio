@@ -20,6 +20,12 @@ html {
     scroll-behavior: smooth;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
 body {
     background-color: var(--VerdeFloresta);
     font-family: "Montserrat", Arial, sans-serif; 
@@ -36,7 +42,8 @@ h1 {
 
 h2 {
     font-size: 3rem;
-    color: var(--VerdeClaro)
+    color: var(--LaranjaForte);
+    margin: 3rem;
 }
 
 header {
@@ -86,7 +93,14 @@ a:active {
     color: var(--VermelhoFogo);
 }
 
+#home {
+    background: radial-gradient(circle at 50% 37%, var(--VerdeFloresta) 20%, var(--VerdeClaro) 177%);
+}
 section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: radial-gradient(circle at 50% 40%, var(--VerdeClaro) -48%, var(--VerdeFloresta) 100%);
     padding: 50px 20px;
     text-align: center;
 }
