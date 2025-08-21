@@ -80,6 +80,14 @@ header {
     margin-bottom: 0.3rem;
 }
 
+.icones-tecnologias {
+    display: flex;
+    flex-direction: wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin: 6rem;
+}
+
 nav ul {
     display: flex;
     flex-direction: row;
