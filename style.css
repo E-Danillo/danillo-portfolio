@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* Reset */
@@ -32,6 +33,22 @@ body {
     line-height: 1.5;            
 }
 
+nav ul {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 30px;
+    background-color: var(--LaranjaForte);
+    list-style: none; 
+    justify-content: center; 
+    gap: 6rem; 
+}
+
+nav a {
+    color: var(--VermelhoFogo);
+}
+
 h1 {
     display: block;
     color: var(--VermelhoFogo);
@@ -44,6 +61,14 @@ h2 {
     font-size: 3rem;
     color: var(--LaranjaForte);
     margin: 3rem;
+}
+
+p {
+    text-align: center;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    padding: 20px 20px 30px;
+    max-width: 1000px;
 }
 
 header {
@@ -60,6 +85,10 @@ header {
     padding: 10px 15px;
 }
 
+#home {
+    background: radial-gradient(circle at 50% 55%, var(--VerdeFloresta) 20%, var(--VerdeClaro) 177%);
+}
+
 #servicos ul {
     list-style: none;
     padding-left: 0;
@@ -69,7 +98,7 @@ header {
 
 #servicos li {
     color: whitesmoke; 
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-bottom: 1.2rem;
     line-height: 1.6;
 }
@@ -88,28 +117,13 @@ header {
     margin: 6rem;
 }
 
-nav ul {
-    display: flex;
-    flex-direction: row;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 30px;
-    background-color: var(--LaranjaForte);
-    list-style: none; 
-    justify-content: center; 
-    gap: 6rem; 
-}
-
-nav a {
-    color: var(--VermelhoFogo);
-}
-
 a {
+    color: var(--VerdeClaro);
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
-a:visited {
+a:visited a:active{
     color: var(--VermelhoFogo);
 }
 
@@ -117,33 +131,31 @@ a:hover {
     color: var(--VerdeLeve);
 }
 
-a:active {
-    color: var(--VermelhoFogo);
-}
-
-#home {
-    background: radial-gradient(circle at 50% 37%, var(--VerdeFloresta) 20%, var(--VerdeClaro) 177%);
-}
-
 section {
     display: flex;
     flex-direction: column;
+    position: relative;
     align-items: center;
     min-height: 100vh;
-
-
     background: radial-gradient(circle at 50% 40%, var(--VerdeClaro) -48%, var(--VerdeFloresta) 100%);
     padding: 50px 20px;
     text-align: center;
 }
 
-p {
-    color: whitesmoke;
-    font-size: 1.2rem;
-    padding: 20px 20px 30px;
+.back-to-top {
+    position: absolute;
+    width: 50px; height: 50px;
+    right: 50px; top: 50px;
+    color: var(--VerdeClaro);
+    filter: brightness(0) saturate(100%) invert(52%) sepia(84%) saturate(4637%) hue-rotate(3deg) brightness(97%) contrast(101%);
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
     text-align: center;
 }
 
