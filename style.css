@@ -1,6 +1,5 @@
 @charset "UTF-8";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
 
 /* Reset */
 * {
@@ -9,7 +8,6 @@
     box-sizing: border-box;
 }
 
-/*Cores:*/
 :root {
     --VerdeFloresta: #002F1F;
     --VerdeClaro: #02735E;
@@ -17,6 +15,13 @@
     --LaranjaForte: #F27405;
     --VermelhoFogo: #731702;
     --BrancoSmoke: #F5F5F5;
+
+    --fs-titulo-grande: 3.5rem;   
+    --fs-titulo: 1.8rem;          
+    --fs-texto: 1.5rem;             
+    --fs-pequeno: 0.875rem; 
+    
+    --border-radius: 10px;
 }
 
 html {
@@ -36,32 +41,34 @@ body {
     background-image: url("imagens/fundo.svg");
 }
 
+nav {
+    font-size: 1.25rem;
+    font-weight: 600;
+    background-color: var(--LaranjaForte);
+}
+
 nav ul {
     display: flex;
-    flex-direction: row;
-    font-size: 20px;
-    font-weight: 600;
-    padding: 30px;
-    background-color: var(--LaranjaForte);
+    justify-content: space-evenly;
+    padding: 35px 0px;
     list-style: none; 
-    justify-content: center; 
-    gap: 6em; 
+    gap: 2em; 
 }
 
 nav a {
-    color: var(--VermelhoFogo);
+    color: var(--VermelhoFogo)
 }
 
+
 h1 {
-    display: block;
     color: var(--VermelhoFogo);
-    font-size: 5rem;
-    font-weight: 800;
+    font-size: var(--fs-titulo-grande);
+    font-weight: 700;
     text-align: center;
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: var(--fs-titulo);
     color: var(--LaranjaForte);
     margin: 3rem;
 }
@@ -69,30 +76,55 @@ h2 {
 p {
     text-align: center;
     color: var(--BrancoSmoke);
-    font-size: 1.5rem;
-    padding: 20px 20px 30px;
-    max-width: 1000px;
-}
-
-header {
-    text-align: center;
+    font-size: var(--fs-texto);
+    padding: 20px 20px;
+    max-width: 745px;
 }
 
 #apresentacao {
-    display: inline-block;
-    margin-top: 45px;
     color: var(--VerdeLeve);
     font-weight: 600;
     border: 3px solid var(--VerdeClaro);
-    border-radius: 10px;
-    padding: 10px 15px;
+    border-radius: var(--border-radius);
 }
 
 #home {
-    background: radial-gradient(circle at 50% 55%, var(--VerdeFloresta) 20%, var(--VerdeClaro) 177%);
-    
+    background: radial-gradient(circle at 50% 55%, var(--VerdeFloresta) 35%, var(--VerdeClaro) 177%);
 }
 
+
+.icones-tecnologias {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 3rem;
+    margin: 3rem;
+}
+
+/*- - Revisei até aqui - -*/
+
+.cartao {
+    background-color: var(--BrancoSmoke);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    width: 200px;
+    transition: transform 0.3s ease, box-shadow 0.4s ease;
+    margin: 20px auto;
+    font-weight: 600;
+    color: var(--VerdeFloresta);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cartao:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cartao p {
+    font-size: var(--fs-pequeno);
+    color: var(--VerdeFloresta);
+    font-weight: 500;
+}
 
 #servicos ul {
     list-style: none;
@@ -114,13 +146,6 @@ header {
     margin-bottom: 0.3rem;
 }
 
-.icones-tecnologias {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 3em;
-    margin: 6rem;
-}
 
 a {
     color: var(--VerdeClaro);
@@ -163,7 +188,10 @@ footer {
     justify-content: center;
     padding: 20px 0;
     text-align: center; 
-    padding-bottom: 5em;
+}
+
+footer p {
+    font-size: var(--fs-pequeno);
 }
 
 .botao,.botao:visited,
