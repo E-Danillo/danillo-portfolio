@@ -1,0 +1,8 @@
+/fontes/*
+  Cache-Control: max-age=604800
+
+/imagens/*
+  Cache-Control: max-age=604800
+
+/style.css
+  Cache-Control: max-age=604800
