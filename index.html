@@ -10,7 +10,6 @@
         <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
         <link rel="manifest" href="favicon_io/site.webmanifest">
         <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
-        <script src="script.js" defer></script>
     </head>
 <body>
     <nav id="nav" role="navigation"> 
@@ -74,8 +73,34 @@
 
         <section id="contato">
             <h2>Contato</h2>
-            <p>Se você gostou do meu trabalho e tem um projeto em mente, podemos conversar. Estou disponível para novos desafios, seja em freelance, colaboração ou oportunidades profissionais.</p>
+            <p>Se você gostou do meu trabalho e tem um projeto em mente, podemos conversar. Estou disponível para novos desafios, seja em freelance, colaboração ou oportunidades profissionais:</p>
             <a href="#nav"><img src="imagens/seta-vertical.png" alt="Voltar ao topo" class="back-to-top" loading="lazy"></a>
+
+            <form action="https://formspree.io/f/xdkwbqpe" method="POST">
+            <form action="https://formspree.io/f/xdkwbqpe" method="POST" class="form-contato">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome ou a organização">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu email">
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required placeholder=". . ."></textarea>
+
+                <div class="botoes">
+                    <button type="submit">ENVIAR</button>
+                    <button type="reset">LIMPAR</button>
+                </div>
+            </form>
+
+            <div class="redes">
+                <p>Ou me encontre em:</p>
+                <a href="https://github.com/E-Danillo" target="_blank">GitHub</a> |
+                <a href="https://www.linkedin.com/in/emerson-danillo/" target="_blank">LinkedIn</a> |
+                <a href="mailto:danilloemerson0@gmail.com">Email</a>
+            </div>
+
+            </form>
         </section>
     </main>
 

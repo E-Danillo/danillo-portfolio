@@ -8,7 +8,7 @@
     box-sizing: border-box;
 }
 
-/*ver questão do padding universal*/
+/*colocar padding universal no body*/
 
 :root {
     --VerdeFloresta: #002F1F;
@@ -23,6 +23,7 @@
     --fs-texto: 1.5rem;             
     --fs-pequeno: 0.875rem; 
     
+    --padding-padrao: 10px 20px;
     --border-radius: 10px;
 }
 
@@ -84,11 +85,18 @@ p {
 }
 
 #apresentacao {
-    padding: 10px 20px;
+    padding: var(--padding-padrao);
     color: var(--VerdeLeve);
     font-weight: 600;
     border: 3px solid var(--VerdeClaro);
     border-radius: var(--border-radius);
+}
+
+.icon {
+    max-width: 200px; 
+    border-radius: 50%;
+    border: var(--VerdeClaro) 4px dashed;
+    margin: 20px auto;
 }
 
 #home {
@@ -109,7 +117,7 @@ p {
     flex-direction: column;
     background-color: var(--BrancoSmoke);
     border-radius: var(--border-radius);
-    padding: 20px;
+    padding: var(--padding-padrao);
     width: 200px;
     transition: transform 0.3s ease, box-shadow 0.4s ease;
     margin: 20px auto;
@@ -179,20 +187,19 @@ p {
 }
 
 a {
-    color: var(--VerdeClaro);
+    color: var(--VermelhoFogo);
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
-/*- - Revisei até aqui - -*/
-a:visited, 
-a:active{
+a:visited {
     color: var(--VermelhoFogo);
 }
 
 a:hover {
-    color: var(--VerdeLeve);
+    color: var(--VerdeFloresta);
 }
+/*- - Revisei até aqui - -*/
 
 section {
     display: flex;
@@ -213,31 +220,78 @@ section {
     filter: brightness(0) saturate(100%) invert(52%) sepia(84%) saturate(4637%) hue-rotate(3deg) brightness(97%) contrast(101%);
 }
 
-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 0;
-    text-align: center; 
+footer p {
+    max-width: none;
+    font-size: var(--fs-pequeno);
+    margin: 15px;
 }
 
-footer p {
-    font-size: var(--fs-pequeno);
+.redes a {
+    color: var(--BrancoSmoke);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--fs-texto);
+    color: var(--BrancoSmoke);
+    gap: 15px; 
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto; 
+    padding: 20px;
+}
+
+input,
+textarea {
+    font-size: var(--fs-texto);
+    width: 100%; 
+    box-sizing: border-box; 
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #222;
+    color: #fff;
+}
+
+textarea {
+    height: 200px;
+    resize: none;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap; 
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    border-radius: var(--border-radius);
+    background: linear-gradient(90deg, var(--LaranjaForte), var(--VerdeFloresta));
+    color: var(--BrancoSmoke);
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
 }
 
 .botao,.botao:visited,
 .botao:active {
-    font-size: 1.5rem;
-    border: 3px solid var(--VerdeClaro);
-    border-radius: 10px;
+    font-size: var(--fs-texto);
+    border: 3px solid var(--VerdeLeve);
+    border-radius: var(--border-radius);
     margin: 20px;
-    padding: 10px 15px;
+    padding: var(--padding-padrao);
     font-weight: bold;
-    text-decoration: none;
     display: inline-block;
-    color: var(--VerdeLeve); 
-    background-color: transparent;
     transition: background 0.3s, transform 0.2s, color 0.3s;
 }
 
@@ -246,13 +300,6 @@ footer p {
     transform: scale(1.05);
 }
 
-.icon {
-    max-width: 200px; width: 100%; height: auto;
-    border-radius: 50%;
-    border: var(--VerdeClaro) 4px dashed;
-    display: block;
-    margin: 20px auto;
-}
 
 /* Responsividade para celular */
 @media (max-width: 768px) {
@@ -261,15 +308,15 @@ footer p {
         justify-content: center;
         gap: 1.5rem;
     }
-
+    
     h1 {
         font-size: 2rem;
     }
-
+    
     h2 {
         font-size: 1.4rem;
     }
-
+    
     p {
         font-size: 1.1rem;
     }
@@ -277,6 +324,24 @@ footer p {
     .icones-tecnologias {
         gap: 2rem;
         margin: 1rem;
+    }
+
+    form {
+        padding: 10px;
+        max-width: 90%;
+    }
+    
+    textarea {
+        height: 150px;
+    }
+    
+    .botoes {
+        flex-direction: column; 
+        align-items: stretch;
+    }
+    
+    button {
+        width: 100%;
     }
 }
 
