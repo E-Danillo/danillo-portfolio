@@ -8,6 +8,8 @@
     box-sizing: border-box;
 }
 
+/*ver questão do padding universal*/
+
 :root {
     --VerdeFloresta: #002F1F;
     --VerdeClaro: #02735E;
@@ -82,6 +84,7 @@ p {
 }
 
 #apresentacao {
+    padding: 10px 20px;
     color: var(--VerdeLeve);
     font-weight: 600;
     border: 3px solid var(--VerdeClaro);
@@ -92,7 +95,6 @@ p {
     background: radial-gradient(circle at 50% 55%, var(--VerdeFloresta) 35%, var(--VerdeClaro) 177%);
 }
 
-
 .icones-tecnologias {
     display: flex;
     flex-flow: row wrap;
@@ -101,51 +103,80 @@ p {
     margin: 3rem;
 }
 
-/*- - Revisei até aqui - -*/
 
 .cartao {
+    display: flex;
+    flex-direction: column;
     background-color: var(--BrancoSmoke);
     border-radius: var(--border-radius);
     padding: 20px;
     width: 200px;
     transition: transform 0.3s ease, box-shadow 0.4s ease;
     margin: 20px auto;
-    font-weight: 600;
-    color: var(--VerdeFloresta);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cartao:hover {
-    transform: translateY(-4px);
+    transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cartao img {
+    width: 100%;
+    border-radius: var(--border-radius);
 }
 
 .cartao p {
     font-size: var(--fs-pequeno);
     color: var(--VerdeFloresta);
-    font-weight: 500;
+    font-weight: 600;
 }
+
+.img-container {
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 95%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: var(--border-radius);
+}
+
+.img-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay a {
+    background: var(--LaranjaForte);
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
 
 #servicos ul {
     list-style: none;
-    padding-left: 0;
-    text-align: center;
     max-width: 800px;
 }
 
 #servicos li {
     color: var(--BrancoSmoke); 
-    font-size: 1.5rem;
-    margin-bottom: 1.2rem;
-    line-height: 1.6;
+    font-size: var(--fs-texto);
+    margin-bottom: 1.5rem;
 }
 
 #servicos strong {
     color: var(--LaranjaForte);
     display: block;
-    margin-bottom: 0.3rem;
 }
-
 
 a {
     color: var(--VerdeClaro);
@@ -153,6 +184,7 @@ a {
     transition: color 0.3s ease-in-out;
 }
 
+/*- - Revisei até aqui - -*/
 a:visited, 
 a:active{
     color: var(--VermelhoFogo);
@@ -231,15 +263,20 @@ footer p {
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
     }
 
-    .icon {
-        max-width: 50%;
+    p {
+        font-size: 1.1rem;
+    }
+
+    .icones-tecnologias {
+        gap: 2rem;
+        margin: 1rem;
     }
 }
 
