@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Cache-Control"   content="max-age=604800">
+        <title>Portfólio | Emerson Danillo - Frontend Developer</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="favicon_io/site.webmanifest">
+        <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
+        <link rel="preload" href="./fontes/Montserrat-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+    </head>
+<body>
+    <nav id="nav" role="navigation"> 
+        <ul>
+            <li><a href="#home" aria-label="Ir para a seção home">Home</a></li>
+            <li><a href="#sobre" aria-label="Ir para a seção sobre">Sobre</a></li>
+            <li><a href="#projetos" aria-label="Ir para a seção projetos">Projetos</a></li>
+            <li><a href="#servicos" aria-label="Ir para a seção serviços">Serviços</a></li>
+            <li><a href="#contato" aria-label="Ir para a seção contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="home">
+            <h2 id="apresentacao">👋 Olá, sou Emerson Danillo!</h2>
+            <h1>Frontend Developer</h1>
+            <img src="imagens/icon.jpeg" alt="Icone de xadrez e cubo mágico" class="icon-principal" loading="lazy">
+            <p>Especialidade em HTML, CSS, JavaScript, React e Python, sempre buscando unir desempenho, acessibilidade e design moderno.</p>
+            <a href="https://github.com/E-Danillo" rel="noopener noreferrer" target="_blank" class="botao">Confira meus Projetos</a>
+            <a href="Curriculo E.Danillo.pdf" rel="noopener noreferrer" target="_blank"  class="botao">Veja meu Currículo!</a>
+        </section>
+
+        <section id="sobre">
+            <h2>Sobre</h2>
+            <p>
+                Sou um desenvolvedor frontend apaixonado por transformar ideias em interfaces funcionais e criativas. 
+                Tenho foco em desempenho, acessibilidade e experiência do usuário, sempre buscando aprender novas tecnologias e melhorar minhas habilidades. 
+                Fora do código, amo desafios lógicos como xadrez e cubos mágicos, e acredito que pensar estrategicamente é essencial tanto nos jogos quanto no desenvolvimento.
+            </p>
+            <p>
+                Atualmente estudo Ciências da Computação e sigo aprimorando meus projetos com HTML, CSS, JavaScript, React e Python. 
+                Meu objetivo é criar soluções que unam beleza, eficiência e propósito. 
+            </p>
+            <div class="icones-tecnologias">
+                <img src="imagens/html.png" alt="Logo do HTML5" loading="lazy">
+                <img src="imagens/css.png" alt="Logo do CSS" loading="lazy">
+                <img src="imagens/javascript.png" alt="Logo do JavaScript" loading="lazy">
+                <img src="imagens/react.png" alt="Logo do React" loading="lazy">
+                <img src="imagens/python.png" alt="Logo do Python" loading="lazy">
+            </div>
+            <a href="#nav"><img src="imagens/seta.png" alt="Voltar ao topo" class="back-to-top" loading="lazy"></a>
+        </section>
+
+        <section id="projetos">
+            <h2>Projetos</h2>
+            <p>Alguns dos meus projetos mais recentes:</p>
+        <div class="cartao">
+        <div class="img-container">
+            <img src="imagens/projeto-ovo.jpeg" alt="Imagem do projeto de site culinário" loading="lazy">
+            <div class="overlay">
+            <a href="https://e-danillo.github.io/Quebrando-o-Gelo-e-o-Ovo/" target="_blank">Ver Projeto 🔗</a>
+            </div>
+        </div>
+        <p>Você diz o que tem na geladeira, e o site te mostra receitas fáceis, criativas e deliciosas.</p>
+        </div>
+
+            <a href="#nav"><img src="imagens/seta.png" alt="Voltar ao topo" class="back-to-top" loading="lazy"></a>
+        </section>
+
+        <section id="servicos">
+            <h2>Serviços</h2>
+            <ul>
+                <li><p><strong>Desenvolvimento de Interfaces:</strong> Criação de sites e aplicações web responsivas, com foco em design moderno, usabilidade e acessibilidade.</p></li>
+                <li><p><strong>Otimização de Performance:</strong> Aceleração no carregamento, SEO técnico e boas práticas de acessibilidade para maior eficiência e visibilidade.</p></li>
+            </ul>
+            <a href="#nav"><img src="imagens/seta.png" alt="Voltar ao topo" class="back-to-top" loading="lazy"></a>
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Se você gostou do meu trabalho e tem um projeto em mente, podemos conversar. Estou disponível para novos desafios, seja em freelance, colaboração ou oportunidades profissionais:</p>
+            <a href="#nav"><img src="imagens/seta.png" alt="Voltar ao topo" class="back-to-top" loading="lazy"></a>
+
+            <form action="https://formspree.io/f/xdkwbqpe" method="POST">
+            <form action="https://formspree.io/f/xdkwbqpe" method="POST" class="form-contato">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nome ou a organização">
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu email">
+
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required placeholder=". . ."></textarea>
+
+                <div class="botoes">
+                    <button type="submit">ENVIAR</button>
+                    <button type="reset">LIMPAR</button>
+                </div>
+            </form>
+
+            <div class="redes">
+                <p>Ou me encontre em:</p>
+                <a href="https://github.com/E-Danillo" target="_blank">GitHub</a> |
+                <a href="https://www.linkedin.com/in/emerson-danillo/" target="_blank">LinkedIn</a> |
+                <a href="mailto:danilloemerson0@gmail.com">Email</a>
+            </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 <strong>Emerson Danillo</strong>. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
