@@ -129,20 +129,36 @@
         <p>&copy; 2025 <strong>Emerson Danillo</strong>. Todos os direitos reservados.</p>
     </footer>
 
-    <script>
-        const text = "👋 Olá, sou Emerson Danillo!";
-        const target = document.getElementById('apresentacao');
-        let i = 0;
+<script>
+const text = "Olá, sou Emerson Danillo!";
+const target = document.getElementById('apresentacao');
+let i = 0;
+let forward = true; // controla se escreve ou apaga
 
-        function typeWriter() {
-            if(i < text.length){
-                target.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 100);
-            }
+function typeWriter() {
+    if (forward) {
+        // adiciona letra
+        target.textContent += text.charAt(i);
+        i++;
+        if (i === text.length) {
+            forward = false; // começa apagar
+            setTimeout(typeWriter, 1500); // pausa antes de apagar
+            return;
         }
-        typeWriter();
-    </script>
+    } else {
+        // apaga letra
+        i--;
+        target.textContent = text.substring(0, i);
+        if (i === 0) {
+            forward = true; // começa a escrever de novo
+        }
+    }
+    setTimeout(typeWriter, forward ? 100 : 50); // escreve mais devagar, apaga mais rápido
+}
+
+typeWriter();
+</script>
+
 
 </body>
 </html>
