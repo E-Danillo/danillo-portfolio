@@ -26,7 +26,7 @@
 
     <main>
         <section id="home">
-            <h2 id="apresentacao">👋 Olá, sou Emerson Danillo!</h2>
+            <h2 id="apresentacao"></h2>
             <h1>Frontend Developer</h1>
             <img src="imagens/icon.jpeg" alt="Icone de xadrez e cubo mágico" class="icon-principal" loading="lazy">
             <p>Especialidade em HTML, CSS, JavaScript, React e Python, sempre buscando unir desempenho, acessibilidade e design moderno.</p>
@@ -128,6 +128,21 @@
     <footer>
         <p>&copy; 2025 <strong>Emerson Danillo</strong>. Todos os direitos reservados.</p>
     </footer>
+
+    <script>
+        const text = "👋 Olá, sou Emerson Danillo!";
+        const target = document.getElementById('apresentacao');
+        let i = 0;
+
+        function typeWriter() {
+            if(i < text.length){
+                target.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        typeWriter();
+    </script>
 
 </body>
 </html>
