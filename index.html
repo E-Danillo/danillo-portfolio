@@ -31,7 +31,7 @@
             <img src="imagens/icon.jpeg" alt="Icone de xadrez e cubo mágico" class="icon-principal" loading="lazy">
             <p>Especialidade em HTML, CSS, JavaScript, React e Python, sempre buscando unir desempenho, acessibilidade e design moderno.</p>
             <a href="https://github.com/E-Danillo" rel="noopener noreferrer" target="_blank" class="botao">Confira meus Projetos</a>
-            <a href="Curriculo E.Danillo.pdf" rel="noopener noreferrer" target="_blank"  class="botao">Veja meu Currículo!</a>
+            <a href="Currículo - Emerson Danillo.pdf" rel="noopener noreferrer" target="_blank"  class="botao">Veja meu Currículo!</a>
         </section>
 
         <section id="sobre">
@@ -129,36 +129,31 @@
         <p>&copy; 2025 <strong>Emerson Danillo</strong>. Todos os direitos reservados.</p>
     </footer>
 
-<script>
-const text = "Olá, sou Emerson Danillo!";
-const target = document.getElementById('apresentacao');
-let i = 0;
-let forward = true; // controla se escreve ou apaga
+    <script>
+        const text = "Olá, sou Emerson Danillo!";
+        const target = document.getElementById('apresentacao');
+        let i = 0;
+        let forward = true; 
 
-function typeWriter() {
-    if (forward) {
-        // adiciona letra
-        target.textContent += text.charAt(i);
-        i++;
-        if (i === text.length) {
-            forward = false; // começa apagar
-            setTimeout(typeWriter, 1500); // pausa antes de apagar
-            return;
+        function typeWriter() {
+            if (forward) {
+                target.textContent += text.charAt(i);
+                i++;
+                if (i === text.length) {
+                    forward = false; 
+                    setTimeout(typeWriter, 1500); 
+                    return;
+                }
+            } else {
+                i--;
+                target.textContent = text.substring(0, i);
+                if (i === 0) {
+                    forward = true; 
+                }
+            }
+            setTimeout(typeWriter, forward ? 100 : 50); 
         }
-    } else {
-        // apaga letra
-        i--;
-        target.textContent = text.substring(0, i);
-        if (i === 0) {
-            forward = true; // começa a escrever de novo
-        }
-    }
-    setTimeout(typeWriter, forward ? 100 : 50); // escreve mais devagar, apaga mais rápido
-}
-
-typeWriter();
-</script>
-
-
+            typeWriter();
+    </script>
 </body>
 </html>
