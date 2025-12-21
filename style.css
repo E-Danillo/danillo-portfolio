@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('fontes/Montserrat-VariableFont_wght.ttf') format('truetype');
+    src: url('fontes/Montserrat-VariableFont_wght.ttf') format('woff2');
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
@@ -79,8 +79,12 @@ nav a {
     color: var(--VerdeClaro);
 }
 
-nav a:hover{
-    color: var(--VerdeSuave);
+nav a:hover {
+    color: var(--BrancoSmoke);
+}
+
+nav a:visited {
+    color: var(--VerdeClaro)
 }
 
 
@@ -104,7 +108,7 @@ h1 {
     to {
         text-shadow:
         0 0 20px var(--VerdeFloresta),
-        0 0 40px var(--VerdeFloresta),
+        0 0 40px var(--VerdeFloresta)
     }
 }
 
@@ -156,7 +160,7 @@ p {
     background: var(--VerdeFloresta);
 }
 
-.icones-tecnologias {
+.box-tecnologias {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -167,7 +171,7 @@ p {
     margin: 3rem;
 }
 
-.icones-tecnologias img {
+.box-tecnologias img {
 filter: brightness(0) saturate(100%)
         invert(52%) sepia(85%)
         saturate(1200%)
@@ -178,8 +182,15 @@ filter: brightness(0) saturate(100%)
     transition: scale 0.2s ease;
 }
 
-.icones-tecnologias img:hover {
+.box-tecnologias img:hover {
     scale: 110%;
+filter: brightness(0) saturate(100%)
+        invert(95%)
+        sepia(3%)
+        saturate(300%)
+        hue-rotate(180deg)
+        brightness(95%)
+        contrast(90%);
 }
 
 .galeria-projetos {
@@ -190,7 +201,7 @@ filter: brightness(0) saturate(100%)
     max-width: 900px;
 }
 
-.cartao {
+.card {
     display: flex;
     flex-direction: column;
     background-color: var(--BgSecundario);
@@ -202,28 +213,28 @@ filter: brightness(0) saturate(100%)
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.cartao:hover {
+.card:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.cartao img {
+.card img {
     width: 95%;
     border-radius: var(--border-radius);
 }
 
-.cartao p {
+.card p {
     font-size: var(--fs-pequeno);
     color: var(--CinzaTexto);
     font-weight: 600;
 }
 
-.img-container {
+.imagem-card {
     position: relative;
 }
 
 #apresentacao::after {
-    content: '|';           /* o “cursor” */
+    content: '|';           
     margin-left: 2px;
     animation: blink 1s infinite;
 }
@@ -232,7 +243,6 @@ filter: brightness(0) saturate(100%)
     0%, 50%, 100% { opacity: 1; }
     25%, 75% { opacity: 0; }
 }
-
 
 /*Fundo preto no hover do projeto*/
 .overlay {
@@ -247,20 +257,31 @@ filter: brightness(0) saturate(100%)
     opacity: 0;
     transition: opacity 0.3s ease;
     border-radius: var(--border-radius);
+    pointer-events: none;
+    transition: background 0.3s, transform 0.2s, color 0.3s;
 }
 
-.img-container:hover .overlay {
+.imagem-card:hover .overlay {
     opacity: 1;
+    pointer-events: auto;
 }
 
-.overlay a {
+.overlay a,
+.overlay a:link,
+.overlay a:visited {
     background: var(--VerdeClaro);
     color: var(--BgSecundario);
     padding: 8px 12px;
     border-radius: 6px;
     font-weight: 600;
+    transition: background 0.3s, transform 0.2s, color 0.3s;
 }
 
+.overlay a:hover {
+    color: var(--BrancoSmoke);
+    background-color: var(--VerdeLeve);
+    transform: scale(1.05);
+}
 
 #servicos ul {
     list-style: none;
@@ -274,22 +295,28 @@ filter: brightness(0) saturate(100%)
 }
 
 #servicos strong {
-    color: var(--LaranjaForte);
+    color: var(--VerdeTexto);
     display: block;
 }
 
 a {
-    color: var(--VerdeFloresta);
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
+a:link,
 a:visited {
-    color: var(--VerdeFloresta);
+    color: var(--VerdeClaro);
 }
 
-/*- - Revisei até aqui - -*/
+a:hover,
+a:visited:hover {
+    color: var(--BrancoSmoke);
+}
 
+a:active {
+    color: var(--BrancoSmoke);
+}
 
 .back-to-top {
     position: fixed;
@@ -302,7 +329,6 @@ a:visited {
             hue-rotate(88deg)
             brightness(95%)
             contrast(95%);
-
 }
 
 footer p {
@@ -310,10 +336,6 @@ footer p {
     max-width: none;
     font-size: var(--fs-pequeno);
     margin: 15px;
-}
-
-.redes a {
-    color: var(--BrancoSmoke);
 }
 
 form {
@@ -369,12 +391,14 @@ button:hover {
     transform: scale(1.05);
 }
 
-.botao,.botao:visited,
+.botao,
+.botao:link,
+.botao:visited,
 .botao:active {
+    color: var(--BgSecundario);
     background-color: var(--VerdeClaro);
     border: 3px solid var(--VerdeLeve);
     font-size: var(--fs-texto);
-    border: 3px solid var(--VerdeLeve);
     border-radius: var(--border-radius);
     margin: 20px;
     padding: var(--padding-padrao);
@@ -384,9 +408,11 @@ button:hover {
 }
 
 .botao:hover {
+    color: var(--BrancoSmoke);
     background-color: var(--VerdeLeve);
     transform: scale(1.05);
 }
+
 
 /* Responsividade para celular */
 @media (max-width: 768px) {
@@ -408,7 +434,7 @@ button:hover {
         font-size: 1.1rem;
     }
 
-    .icones-tecnologias {
+    .box-tecnologias {
         gap: 2rem;
         margin: 1rem;
     }

@@ -13,9 +13,9 @@
         <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
         <link rel="preload" href="./fontes/Montserrat-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
     </head>
-<body>
-    <nav id="nav" role="navigation"> 
-        <ul>
+    <body>
+        <nav id="nav" role="navigation"> 
+            <ul>
             <li><a href="#home" aria-label="Ir para a seção home">Home</a></li>
             <li><a href="#sobre" aria-label="Ir para a seção sobre">Sobre</a></li>
             <li><a href="#projetos" aria-label="Ir para a seção projetos">Projetos</a></li>
@@ -23,7 +23,7 @@
             <li><a href="#contato" aria-label="Ir para a seção contato">Contato</a></li>
         </ul>
     </nav>
-
+    
     <main>
         <section id="home">
             <h2 id="apresentacao"></h2>
@@ -33,24 +33,23 @@
             <a href="https://github.com/E-Danillo" rel="noopener noreferrer" target="_blank" class="botao">Confira meus Projetos</a>
             <a href="Currículo - Emerson Danillo.pdf" rel="noopener noreferrer" target="_blank"  class="botao">Veja meu Currículo!</a>
         </section>
-
+        
         <section id="sobre">
             <h2>Sobre</h2>
-            
-                <p>
-                    Sou um desenvolvedor frontend que gosta de entender como as coisas funcionam, não apenas fazê-las funcionar.
-                    Tenho interesse especial em desempenho, acessibilidade e organização do código, buscando sempre criar interfaces claras, responsivas e intuitivas.
+            <p>
+                Sou um desenvolvedor frontend que gosta de entender como as coisas funcionam, não apenas fazê-las funcionar.
+                Tenho interesse especial em desempenho, acessibilidade e organização do código, buscando sempre criar interfaces claras, responsivas e intuitivas.
+            </p>
+            <p>
+                Meu gosto por desafios lógicos, como xadrez e cubos mágicos, influencia diretamente minha forma de programar: penso em problemas por etapas, analiso possibilidades e busco soluções eficientes.
+                Vejo cada bug como parte do aprendizado e cada projeto como uma oportunidade de evoluir.
                 </p>
-<p>
-    
-                    Meu gosto por desafios lógicos, como xadrez e cubos mágicos, influencia diretamente minha forma de programar: penso em problemas por etapas, analiso possibilidades e busco soluções eficientes.
-                    Vejo cada bug como parte do aprendizado e cada projeto como uma oportunidade de evoluir.
-</p>
-
-                <p>Atualmente estudo Ciências da Computação e sigo aprimorando minhas habilidades com HTML, CSS, JavaScript, React e Python, desenvolvendo projetos práticos e aplicando boas práticas do desenvolvimento frontend.</p>
-            
-            <div class="icones-tecnologias">
-                <img src="imagens/html.png" alt="Logo do HTML5" loading="lazy">
+                <p>
+                    Atualmente estudo Ciências da Computação e sigo aprimorando minhas habilidades com HTML, CSS, JavaScript, React e Python, desenvolvendo projetos práticos e aplicando boas práticas do desenvolvimento frontend.
+                </p>
+                
+                <div class="box-tecnologias">
+                    <img src="imagens/html.png" alt="Logo do HTML5" loading="lazy">
                 <img src="imagens/css.png" alt="Logo do CSS" loading="lazy">
                 <img src="imagens/javascript.png" alt="Logo do JavaScript" loading="lazy">
                 <img src="imagens/react.png" alt="Logo do React" loading="lazy">
@@ -58,32 +57,30 @@
             </div>
             <a href="#nav"><img src="imagens/seta.png" alt="Voltar ao topo" class="back-to-top" loading="lazy"></a>
         </section>
-
+        
         <section id="projetos">
             <h2>Projetos</h2>
             <p>Alguns dos meus projetos mais recentes:</p>
-        <div class="galeria-projetos">
-            <div class="cartao">
-            <div class="img-container">
-                <img src="imagens/projeto-ovo.jpeg" alt="Imagem do projeto de site culinário" loading="lazy">
-                <div class="overlay">
-                <a href="https://e-danillo.github.io/quebrando-o-gelo-e-o-ovo/" target="_blank">Ver Projeto 🔗</a>
+            <div class="galeria-projetos">
+                <div class="card">
+                    <div class="imagem-card">
+                    <img src="imagens/projeto-ovo.jpeg" alt="Imagem do projeto de site culinário" loading="lazy">
+                    <div class="overlay">
+                    <a href="https://e-danillo.github.io/quebrando-o-gelo-e-o-ovo/" target="_blank">Ver Projeto 🔗</a>
+                </div>
+                </div>
+                    <p>Você diz o que tem na geladeira, e o site te mostra receitas fáceis, criativas e deliciosas.</p>
+                </div>
+                <div class="card">
+                <div class="imagem-card">
+                    <img src="imagens/relogiodinamico.png" alt="Imagem do projeto de site culinário" loading="lazy">
+                    <div class="overlay">
+                    <a href="https://e-danillo.github.io/relogio-dinamico/" target="_blank">Ver Projeto 🔗</a>
+                </div>
+                </div>
+                    <p>Relógio digital que atualiza a hora em tempo real, com mudanças dinâmicas de cores e imagens de fundo conforme a hora</p>
                 </div>
             </div>
-                <p>Você diz o que tem na geladeira, e o site te mostra receitas fáceis, criativas e deliciosas.</p>
-            </div>
-            <div class="cartao">
-            <div class="img-container">
-                <img src="imagens/relogiodinamico.png" alt="Imagem do projeto de site culinário" loading="lazy">
-                <div class="overlay">
-                <a href="https://e-danillo.github.io/relogio-dinamico/" target="_blank">Ver Projeto 🔗</a>
-                </div>
-            </div>
-                <p>Relógio digital que atualiza a hora em tempo real, com mudanças dinâmicas de cores e imagens de fundo conforme a hora</p>
-            </div>
-        </div>
-
-            <a href="#nav"><img src="imagens/seta.png" alt="Voltar ao topo" class="back-to-top" loading="lazy"></a>
         </section>
 
         <section id="servicos">
@@ -93,7 +90,6 @@
                 <li><p><strong>Aplicações Web Interativas</strong>Desenvolvimento de funcionalidades dinâmicas com JavaScript, como relógios, galerias, animações e dashboards.</p></li>
                 <li><p><strong>Manutenção e Otimização de Sites</strong> Garantia de que os sites funcionem corretamente, com atualizações regulares e melhorias de desempenho.</p></li>
             </ul>
-            <a href="#nav"><img src="imagens/seta.png" alt="Voltar ao topo" class="back-to-top" loading="lazy"></a>
         </section>
 
         <section id="contato">
@@ -124,7 +120,6 @@
                 <a href="https://www.linkedin.com/in/emerson-danillo/" target="_blank">LinkedIn</a> |
                 <a href="mailto:danilloemerson0@gmail.com">Email</a>
             </div>
-
             </form>
         </section>
     </main>
