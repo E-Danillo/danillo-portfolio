@@ -16,21 +16,34 @@
 }
 
 :root {
-    --VerdeFloresta: #002F1F;
-    --VerdeClaro: #02735E;
-    --VerdeLeve: #03A678;
-    --LaranjaForte: #F27405;
-    --VermelhoFogo: #731702;
-    --BrancoSmoke: #FAFAFA;
+    /* Fundos */
+    --VerdeFloresta: #0F172A;   /* fundo principal */
+    --BgSecundario: #020617;   /* cards / navbar */
 
+    /* Verdes */
+    --VerdeClaro: #22C55E;     /* verde principal */
+    --VerdeLeve: #16A34A;      /* hover / bordas */
+    --VerdeSuave: #4ADE80;     /* detalhes */
+    --VerdeTexto: #A7F3D0;     /* h2 */
+
+    /* Texto */
+    --BrancoSmoke: #E5E7EB;    /* texto principal */
+    --CinzaTexto: #9CA3AF;     /* texto secundário */
+
+    /* Feedback */
+    --Erro: #EF4444;
+    --Aviso: #FACC15;
+
+    /* Tipografia */
     --fs-titulo-grande: 3.5rem;   
     --fs-titulo: 1.8rem;          
-    --fs-texto: 1.5rem;             
+    --fs-texto: 1.3rem;             
     --fs-pequeno: 0.875rem; 
     
     --padding-padrao: 10px 20px;
     --border-radius: 10px;
 }
+
 
 html {
     scroll-behavior: smooth;
@@ -46,52 +59,52 @@ body {
     background-color: var(--VerdeFloresta);
     font-family: "Montserrat", Arial, sans-serif; 
     line-height: 1.5;   
-    background-image: url("imagens/fundo.svg");
 }
 
 nav {
     font-size: 1.25rem;
     font-weight: 600;
-    background-color: var(--LaranjaForte);
+    background-color: var(--BgSecundario);
 }
 
 nav ul {
     display: flex;
     justify-content: space-evenly;
-    padding: 35px 0px;
+    padding: 25px 0px;
     list-style: none; 
     gap: 2em; 
 }
 
 nav a {
-    color: var(--VermelhoFogo)
+    color: var(--VerdeClaro);
+}
+
+nav a:hover{
+    color: var(--VerdeSuave);
 }
 
 
 h1 {
-    color: var(--VermelhoFogo);
+    color: var(--VerdeClaro);
     font-size: var(--fs-titulo-grande);
     font-weight: 700;
     text-align: center;
-    color: var(--VermelhoFogo);
     text-shadow:
-        0 0 5px var(--LaranjaForte),
-        0 0 15px var(--LaranjaForte),
-        0 0 30px var(--LaranjaForte);
+        0 0 10px rgba(34,197,94,0.6),
+        0 0 35px rgba(34,197,94,0.4);
     animation: pulsar 1.5s infinite alternate;
 }
 
 @keyframes pulsar {
     from {
         text-shadow:
-        0 0 5px var(--LaranjaForte),
-        0 0 10px var(--LaranjaForte);
+        0 0 5px var(--VerdeClaro),
+        0 0 10px var(--VerdeClaro);
     }
     to {
         text-shadow:
-        0 0 20px var(--LaranjaForte),
-        0 0 40px var(--LaranjaForte),
-        0 0 60px var(--VermelhoFogo);
+        0 0 20px var(--VerdeFloresta),
+        0 0 40px var(--VerdeFloresta),
     }
 }
 
@@ -101,15 +114,19 @@ section {
     position: relative;
     align-items: center;
     min-height: 100vh;
-    background: radial-gradient(circle at 50% 40%, var(--VerdeClaro) -48%, var(--VerdeFloresta) 100%);
+    background: var(--VerdeFloresta);
     padding: 50px 20px;
     text-align: center;
 }
 
 h2 {
     font-size: var(--fs-titulo);
-    color: var(--LaranjaForte);
+    color: var(--VerdeClaro);
     margin: 3rem;
+}
+
+strong {
+    color: var(--VerdeClaro);
 }
 
 p {
@@ -136,7 +153,7 @@ p {
 }
 
 #home {
-    background: radial-gradient(circle at 50% 55%, var(--VerdeFloresta) 35%, var(--VerdeClaro) 177%);
+    background: var(--VerdeFloresta);
 }
 
 .icones-tecnologias {
@@ -151,7 +168,13 @@ p {
 }
 
 .icones-tecnologias img {
-    filter: brightness(0) saturate(100%) invert(65%) sepia(84%) saturate(4637%) hue-rotate(3deg) brightness(97%) contrast(101%);
+filter: brightness(0) saturate(100%)
+        invert(52%) sepia(85%)
+        saturate(1200%)
+        hue-rotate(88deg)
+        brightness(95%)
+        contrast(95%);
+
     transition: scale 0.2s ease;
 }
 
@@ -170,7 +193,7 @@ p {
 .cartao {
     display: flex;
     flex-direction: column;
-    background-color: var(--BrancoSmoke);
+    background-color: var(--BgSecundario);
     border-radius: var(--border-radius);
     padding: var(--padding-padrao);
     width: 250px;
@@ -191,7 +214,7 @@ p {
 
 .cartao p {
     font-size: var(--fs-pequeno);
-    color: var(--VerdeFloresta);
+    color: var(--CinzaTexto);
     font-weight: 600;
 }
 
@@ -231,7 +254,8 @@ p {
 }
 
 .overlay a {
-    background: var(--LaranjaForte);
+    background: var(--VerdeClaro);
+    color: var(--BgSecundario);
     padding: 8px 12px;
     border-radius: 6px;
     font-weight: 600;
@@ -255,18 +279,15 @@ p {
 }
 
 a {
-    color: var(--VermelhoFogo);
+    color: var(--VerdeFloresta);
     text-decoration: none;
     transition: color 0.3s ease-in-out;
 }
 
 a:visited {
-    color: var(--VermelhoFogo);
-}
-
-a:hover {
     color: var(--VerdeFloresta);
 }
+
 /*- - Revisei até aqui - -*/
 
 
@@ -275,7 +296,13 @@ a:hover {
     width: 30px; height: 30px;
     right: 50px; top: 150px;
     color: var(--VerdeClaro);
-    filter: brightness(0) saturate(100%) invert(65%) sepia(84%) saturate(4637%) hue-rotate(3deg) brightness(97%) contrast(101%);
+    filter: brightness(0) saturate(100%)
+            invert(52%) sepia(85%)
+            saturate(1200%)
+            hue-rotate(88deg)
+            brightness(95%)
+            contrast(95%);
+
 }
 
 footer p {
@@ -303,14 +330,14 @@ form {
 
 input,
 textarea {
+    background: var(--BgSecundario);
+    color: var(--BrancoSmoke);
+    border: 1px solid var(--VerdeLeve);
     font-size: var(--fs-texto);
     width: 100%; 
     box-sizing: border-box; 
     padding: 10px;
-    border: 1px solid #444;
     border-radius: 8px;
-    background: #222;
-    color: #fff;
 }
 
 textarea {
@@ -332,8 +359,8 @@ button {
     cursor: pointer;
     border: none;
     border-radius: var(--border-radius);
-    background: linear-gradient(90deg, var(--LaranjaForte), var(--VerdeFloresta));
-    color: var(--BrancoSmoke);
+    background: linear-gradient(90deg, var(--VerdeClaro), var(--VerdeSuave));
+    color: var(--BgSecundario);
     font-weight: bold;
     transition: 0.2s;
 }
@@ -344,7 +371,8 @@ button:hover {
 
 .botao,.botao:visited,
 .botao:active {
-    color: var( --VerdeLeve);
+    background-color: var(--VerdeClaro);
+    border: 3px solid var(--VerdeLeve);
     font-size: var(--fs-texto);
     border: 3px solid var(--VerdeLeve);
     border-radius: var(--border-radius);
@@ -356,7 +384,7 @@ button:hover {
 }
 
 .botao:hover {
-    background-color: var(--VerdeClaro);
+    background-color: var(--VerdeLeve);
     transform: scale(1.05);
 }
 
