@@ -36,8 +36,9 @@
 
     /* Tipografia */
     --fs-titulo-grande: 3.5rem;   
-    --fs-titulo: 1.8rem;          
-    --fs-texto: 1.3rem;             
+    --fs-titulo: 2.25rem;  
+    --fs-subtitulo: 1.25rem;        
+    --fs-texto: 1.125rem;             
     --fs-pequeno: 0.875rem; 
     
     --padding-padrao: 10px 20px;
@@ -126,11 +127,16 @@ section {
 h2 {
     font-size: var(--fs-titulo);
     color: var(--VerdeClaro);
-    margin: 3rem;
+    margin-bottom: 3rem;
 }
 
 strong {
     color: var(--VerdeClaro);
+}
+
+#servicos strong {
+    font-size: var(--fs-subtitulo);
+    margin-bottom: 10px;
 }
 
 p {
@@ -160,6 +166,12 @@ p {
     background: var(--VerdeFloresta);
 }
 
+.div-conteudo {
+    background-color: #15213b;
+    padding: 40px;
+    border-radius: var(--border-radius);
+}
+
 .box-tecnologias {
     display: flex;
     flex-flow: row wrap;
@@ -172,26 +184,28 @@ p {
 }
 
 .box-tecnologias img {
-filter: brightness(0) saturate(100%)
-        invert(52%) sepia(85%)
-        saturate(1200%)
-        hue-rotate(88deg)
-        brightness(95%)
-        contrast(95%);
+    filter: brightness(0) saturate(100%)
+            invert(52%) sepia(85%)
+            saturate(1200%)
+            hue-rotate(88deg)
+            brightness(95%)
+            contrast(95%);
 
-    transition: scale 0.2s ease;
+    transition: transform 0.4s ease, filter 0.3s ease;
 }
 
 .box-tecnologias img:hover {
-    scale: 110%;
-filter: brightness(0) saturate(100%)
-        invert(95%)
-        sepia(3%)
-        saturate(300%)
-        hue-rotate(180deg)
-        brightness(95%)
-        contrast(90%);
+    transform: scale(1.1) rotate(360deg);
+
+    filter: brightness(0) saturate(100%)
+            invert(95%)
+            sepia(3%)
+            saturate(300%)
+            hue-rotate(180deg)
+            brightness(95%)
+            contrast(90%);
 }
+
 
 .galeria-projetos {
     display: flex;
@@ -367,30 +381,6 @@ textarea {
     resize: none;
 }
 
-.botoes {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 20px 0;
-    flex-wrap: wrap; 
-}
-
-button {
-    width: 150px;
-    height: 50px;
-    cursor: pointer;
-    border: none;
-    border-radius: var(--border-radius);
-    background: linear-gradient(90deg, var(--VerdeClaro), var(--VerdeSuave));
-    color: var(--BgSecundario);
-    font-weight: bold;
-    transition: 0.2s;
-}
-
-button:hover {
-    transform: scale(1.05);
-}
-
 .botao,
 .botao:link,
 .botao:visited,
@@ -412,7 +402,6 @@ button:hover {
     background-color: var(--VerdeLeve);
     transform: scale(1.05);
 }
-
 
 /* Responsividade para celular */
 @media (max-width: 768px) {
