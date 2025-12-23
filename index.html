@@ -76,17 +76,46 @@
                     </div>
                     <div class="card">
                     <div class="imagem-card">
-                        <img src="imagens/relogiodinamico.png" alt="Imagem do projeto de site culinário" loading="lazy">
+                        <img src="imagens/relogiodinamico.png" alt="Imagem do projeto do relógio dinâmico" loading="lazy">
                         <div class="overlay">
                         <a href="https://e-danillo.github.io/relogio-dinamico/" target="_blank">Ver Projeto 🔗</a>
                         </div>
                     </div>
                         <p>Relógio digital em React, que atualiza a hora em tempo real, com mudanças dinâmicas de cores e imagens de fundo conforme a hora</p>
                     </div>
+                    <div class="card">
+                        <div class="imagem-card">
+                            <img src="imagens/calculadora.png" alt="Imagem do projeto de calculadora" loading="lazy">
+                            <div class="overlay">
+                            <a href="https://e-danillo.github.io/calculadora-react/" target="_blank">Ver Projeto 🔗</a>
+                            </div>
+                        </div>
+                        <p>Uma calculadora simples construída com React, permitindo realizar operações básicas como soma, subtração, multiplicação e divisão.</p>
+                    </div>
+                    <div class="card">
+                        <div class="imagem-card">
+                            <img src="imagens/contador.png" alt="Imagem do projeto do contador" loading="lazy">
+                            <div class="overlay">
+                            <a href="https://e-danillo.github.io/contador-light-dark/" target="_blank">Ver Projeto 🔗</a>
+                        </div>
+                    </div>
+                    <p>Um contador simples desenvolvido em React para treinar conceitos como componentes, estado (useState) e eventos. O objetivo é entender como a interface reage às mudanças de estado de forma clara e direta.</p>
+                    </div>
+                    <div class="card">
+                        <div class="imagem-card">
+                            <img src="imagens/todolist.png" alt="Imagem do projeto de to-do-list" loading="lazy">
+                            <div class="overlay">
+                            <a href="https://e-danillo.github.io/to-do-list/" target="_blank">Ver Projeto 🔗</a>
+                        </div>
+                    </div>
+                    <p>Um contador simples desenvolvido em React para treinar conceitos como componentes, estado (useState) e eventos. O objetivo é entender como a interface reage às mudanças de estado de forma clara e direta.</p>
+                    </div>
                 </div>
             </div>
+            </div>
+            <button id="loadMore" class="botao">Ver mais projetos</button>
         </section>
-
+        
         <section id="servicos">
             <div class="div-conteudo">
                 <h2>Serviços</h2>
@@ -136,30 +165,61 @@
     </footer>
 
     <script>
-        const text = "Olá, sou Emerson Danillo!";
-        const target = document.getElementById('apresentacao');
-        let i = 0;
-        let forward = true; 
+document.addEventListener('DOMContentLoaded', () => {
 
-        function typeWriter() {
-            if (forward) {
-                target.textContent += text.charAt(i);
-                i++;
-                if (i === text.length) {
-                    forward = false; 
-                    setTimeout(typeWriter, 1500); 
-                    return;
-                }
-            } else {
-                i--;
-                target.textContent = text.substring(0, i);
-                if (i === 0) {
-                    forward = true; 
-                }
+    const text = "Olá, sou Emerson Danillo!";
+    const target = document.getElementById('apresentacao');
+    let i = 0;
+    let forward = true; 
+
+    function typeWriter() {
+        if (forward) {
+            target.textContent += text.charAt(i);
+            i++;
+            if (i === text.length) {
+                forward = false;
+                setTimeout(typeWriter, 1500);
+                return;
             }
-            setTimeout(typeWriter, forward ? 100 : 50); 
+        } else {
+            i--;
+            target.textContent = text.substring(0, i);
+            if (i === 0) {
+                forward = true;
+            }
         }
-            typeWriter();
+        setTimeout(typeWriter, forward ? 100 : 50);
+    }
+    typeWriter();
+
+    const cards = document.querySelectorAll('#projetos .card');
+    const loadMoreBtn = document.getElementById('loadMore');
+
+    let visibleCards = 4;
+
+    cards.forEach((card, index) => {
+        if (index >= visibleCards) {
+            card.style.display = 'none';
+        }
+    });
+
+    loadMoreBtn.addEventListener('click', () => {
+        let shown = 0;
+
+        cards.forEach(card => {
+            if (card.style.display === 'none' && shown < 4) {
+                card.style.display = '';
+                shown++;
+            }
+        });
+
+        const hiddenCards = [...cards].some(card => card.style.display === 'none');
+        if (!hiddenCards) {
+            loadMoreBtn.style.display = 'none';
+        }
+    });
+
+});
     </script>
 </body>
 </html>

@@ -195,7 +195,7 @@ p {
 }
 
 .box-tecnologias img:hover {
-    transform: scale(1.1) rotate(360deg);
+    transform: scale(0.8) rotate(360deg);
 
     filter: brightness(0) saturate(100%)
             invert(95%)
@@ -206,26 +206,28 @@ p {
             contrast(90%);
 }
 
-
 .galeria-projetos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+
+#projetos p {
+    max-width: none;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
     background-color: var(--BgSecundario);
-    border-radius: var(--border-radius);
-    padding: var(--padding-padrao);
-    width: 250px;
-    transition: transform 0.3s ease, box-shadow 0.4s ease;
-    margin: 20px auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
+
 
 .card:hover {
     transform: translateY(-5px);
@@ -233,15 +235,21 @@ p {
 }
 
 .card img {
-    width: 95%;
-    border-radius: var(--border-radius);
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
 }
 
+
 .card p {
+    padding: 1rem;
     font-size: var(--fs-pequeno);
     color: var(--CinzaTexto);
-    font-weight: 600;
+    font-weight: 500;
+    line-height: 1.5;
 }
+
 
 .imagem-card {
     position: relative;
@@ -264,7 +272,8 @@ p {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(2px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -403,6 +412,17 @@ textarea {
     transform: scale(1.05);
 }
 
+#projetos button {
+    margin-top: 2rem;
+}
+
+/* Responsividade para tablet */
+@media (max-width: 900px) {
+    .galeria-projetos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 /* Responsividade para celular */
 @media (max-width: 768px) {
     nav ul{
@@ -444,6 +464,19 @@ textarea {
     
     button {
         width: 100%;
+    }
+
+    .galeria-projetos {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+
+    .card img {
+        height: 160px;
+    }
+
+    .card p {
+        font-size: 0.9rem;
     }
 }
 
