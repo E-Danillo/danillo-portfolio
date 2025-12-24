@@ -14,7 +14,9 @@
         <link rel="preload" href="./fontes/Montserrat-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
     </head>
     <body>
-        <nav id="nav" role="navigation"> 
+        
+    <nav id="nav" role="navigation"> 
+        <button id="btn-mobile">☰</button>
             <ul>
             <li><a href="#home" aria-label="Ir para a seção home">Home</a></li>
             <li><a href="#sobre" aria-label="Ir para a seção sobre">Sobre</a></li>
@@ -120,9 +122,26 @@
             <div class="div-conteudo">
                 <h2>Serviços</h2>
                 <ul>
-                    <li><p><strong>Desenvolvimento de Websites Responsivos</strong> Criação de sites que se adaptam a diferentes telas, do desktop ao mobile, garantindo ótima experiência ao usuário.</p></li>
-                    <li><p><strong>Aplicações Web Interativas</strong>Desenvolvimento de funcionalidades dinâmicas com JavaScript, como relógios, galerias, animações e dashboards.</p></li>
-                    <li><p><strong>Manutenção e Otimização de Sites</strong> Garantia de que os sites funcionem corretamente, com atualizações regulares e melhorias de desempenho.</p></li>
+                    <li>
+                        <p>
+                            <strong>Desenvolvimento de Websites Responsivos</strong><br>
+                            Criação de sites modernos e responsivos, adaptados para desktop, tablet e dispositivos móveis, garantindo boa usabilidade e visual profissional.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <strong>Aplicações Web Interativas</strong><br>
+                            Desenvolvimento de interfaces dinâmicas utilizando JavaScript e React, com foco em componentes reutilizáveis, interatividade e desempenho.
+                        </p>
+                    </li>
+
+                    <li>
+                        <p>
+                            <strong>Manutenção e Otimização de Sites</strong><br>
+                            Correção de erros, melhorias contínuas e otimização de performance para garantir estabilidade, velocidade e melhor experiência ao usuário.
+                        </p>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -132,7 +151,6 @@
             <p>Se você gostou do meu trabalho e tem um projeto em mente, podemos conversar. Estou disponível para novos desafios, seja em freelance, colaboração ou oportunidades profissionais:</p>
             <a href="#nav"><img src="imagens/seta.png" alt="Voltar ao topo" class="back-to-top" loading="lazy"></a>
 
-            <form action="https://formspree.io/f/xdkwbqpe" method="POST">
             <form action="https://formspree.io/f/xdkwbqpe" method="POST" class="form-contato">
                 <label for="nome">Nome</label>
                 <input type="text" id="nome" name="nome" required placeholder="Digite seu nome ou a organização">
@@ -143,7 +161,7 @@
                 <label for="mensagem">Mensagem</label>
                 <textarea id="mensagem" name="mensagem" rows="5" required placeholder=". . ."></textarea>
 
-                <div class="botoes">
+                <div>
                     <button type="submit" class="botao">Enviar</button>
                     <button type="reset" class="botao">Limpar</button>
                 </div>
@@ -220,6 +238,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+    // Menu para mobile
+    const btn = document.getElementById('btn-mobile');
+    const menu = document.querySelector('#nav ul');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('show');
+    });
+
     </script>
 </body>
 </html>

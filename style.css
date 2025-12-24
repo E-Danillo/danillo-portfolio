@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('fontes/Montserrat-VariableFont_wght.ttf') format('woff2');
+    src: url('fontes/Montserrat-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
     font-display: swap;
@@ -19,7 +19,7 @@
     /* Fundos */
     --VerdeFloresta: #0F172A;   /* fundo principal */
     --BgSecundario: #020617;   /* cards / navbar */
-
+    --AzulEscuríssimo: #15213b;
     /* Verdes */
     --VerdeClaro: #22C55E;     /* verde principal */
     --VerdeLeve: #16A34A;      /* hover / bordas */
@@ -84,11 +84,6 @@ nav a:hover {
     color: var(--BrancoSmoke);
 }
 
-nav a:visited {
-    color: var(--VerdeClaro)
-}
-
-
 h1 {
     color: var(--VerdeClaro);
     font-size: var(--fs-titulo-grande);
@@ -103,13 +98,13 @@ h1 {
 @keyframes pulsar {
     from {
         text-shadow:
-        0 0 5px var(--VerdeClaro),
-        0 0 10px var(--VerdeClaro);
+        0 0 5px var(--VerdeLeve),
+        0 0 10px var(--VerdeLeve);
     }
     to {
         text-shadow:
-        0 0 20px var(--VerdeFloresta),
-        0 0 40px var(--VerdeFloresta)
+        0 0 20px var(--VerdeClaro),
+        0 0 40px var(--VerdeClaro)
     }
 }
 
@@ -118,7 +113,7 @@ section {
     flex-direction: column;
     position: relative;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100svh;
     background: var(--VerdeFloresta);
     padding: 50px 20px;
     text-align: center;
@@ -167,7 +162,7 @@ p {
 }
 
 .div-conteudo {
-    background-color: #15213b;
+    background-color: var(--AzulEscuríssimo);
     padding: 40px;
     border-radius: var(--border-radius);
 }
@@ -195,7 +190,7 @@ p {
 }
 
 .box-tecnologias img:hover {
-    transform: scale(0.8) rotate(360deg);
+    transform: scale(0.95) rotate(6deg);
 
     filter: brightness(0) saturate(100%)
             invert(95%)
@@ -278,10 +273,8 @@ p {
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: var(--border-radius);
     pointer-events: none;
-    transition: background 0.3s, transform 0.2s, color 0.3s;
+    transition: background 0.3s, transform 0.2s, color 0.3s, opacity 0.3s ease;
 }
 
 .imagem-card:hover .overlay {
@@ -295,7 +288,7 @@ p {
     background: var(--VerdeClaro);
     color: var(--BgSecundario);
     padding: 8px 12px;
-    border-radius: 6px;
+    border-radius: var(--border-radius);
     font-weight: 600;
     transition: background 0.3s, transform 0.2s, color 0.3s;
 }
@@ -332,8 +325,7 @@ a:visited {
     color: var(--VerdeClaro);
 }
 
-a:hover,
-a:visited:hover {
+a:hover {
     color: var(--BrancoSmoke);
 }
 
@@ -343,8 +335,11 @@ a:active {
 
 .back-to-top {
     position: fixed;
-    width: 30px; height: 30px;
-    right: 50px; top: 150px;
+    width: 30px;
+    height: 30px;
+    bottom: 40px;
+    right: 40px;
+    cursor: pointer;
     color: var(--VerdeClaro);
     filter: brightness(0) saturate(100%)
             invert(52%) sepia(85%)
@@ -416,6 +411,10 @@ textarea {
     margin-top: 2rem;
 }
 
+#btn-mobile {
+    display: none;
+}
+
 /* Responsividade para tablet */
 @media (max-width: 900px) {
     .galeria-projetos {
@@ -440,7 +439,7 @@ textarea {
     }
     
     p {
-        font-size: 1.1rem;
+        font-size: .875rem;
     }
 
     .box-tecnologias {
@@ -456,15 +455,6 @@ textarea {
     textarea {
         height: 150px;
     }
-    
-    .botoes {
-        flex-direction: column; 
-        align-items: stretch;
-    }
-    
-    button {
-        width: 100%;
-    }
 
     .galeria-projetos {
         grid-template-columns: 1fr;
@@ -478,9 +468,40 @@ textarea {
     .card p {
         font-size: 0.9rem;
     }
+
+    #btn-mobile {
+        font-size: 2rem;
+        border: 3px solid var(--VerdeClaro);
+        border-radius: 10px;
+        background-color: var(--VerdeFloresta);
+        color: var(--BrancoSmoke);
+        padding: 4px 12px;
+        cursor: pointer;
+        display: block; 
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 2000;
+    }
+
+    nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: var(--BgSecundario);
+    position: fixed;
+    top: 70px;
+    right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1500;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
 }
 
 /* Acessibilidade */
-a:focus, .botao:focus {
+a:focus-visible, .botao:focus-visible {
     outline: 3px solid var(--BrancoSmoke);
 }
