@@ -442,6 +442,10 @@ textarea {
         font-size: .875rem;
     }
 
+    label {
+        font-size: .975rem;
+    }
+
     .box-tecnologias {
         gap: 2rem;
         margin: 1rem;
@@ -454,6 +458,18 @@ textarea {
     
     textarea {
         height: 150px;
+    }
+
+    #sobre .div-conteudo {
+        padding: 24px 16px;
+    }
+
+    #sobre p {
+        text-align: left;
+        max-width: 65ch; 
+        line-height: 1.6; 
+        margin-bottom: 1.2rem;
+        padding: 0;
     }
 
     .galeria-projetos {
@@ -498,6 +514,18 @@ textarea {
 
     nav ul.show {
         display: flex;
+    }
+
+    #servicos li {
+        padding: 16px;
+    }
+
+    #servicos li strong {
+        font-size: 0.95rem;
+    }
+
+    #servicos li span {
+        font-size: 0.85rem;
     }
 }
 
