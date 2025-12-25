@@ -450,6 +450,10 @@ textarea {
         font-size: .975rem;
     }
 
+    .icon-principal {
+        border: var(--VerdeClaro) 4px solid;
+    }
+    
     .box-tecnologias {
         gap: 2rem;
         margin: 1rem;
