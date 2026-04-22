@@ -227,6 +227,10 @@ p {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
+.card-texto {
+    padding: 0px 20px;
+}
+
 
 .card:hover {
     transform: translateY(-5px);
@@ -240,15 +244,20 @@ p {
     display: block;
 }
 
-
 .card p {
-    padding: 1rem;
     font-size: var(--fs-pequeno);
     color: var(--CinzaTexto);
     font-weight: 500;
     line-height: 1.5;
+    margin: 20px 0px;
+    padding: 0px;
 }
 
+h3 {
+    color: var(--VerdeClaro);
+    font-size: var(--fs-subtitulo);
+    margin: 0.5rem 0;
+}
 
 .imagem-card {
     position: relative;
