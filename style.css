@@ -304,6 +304,7 @@ h3 {
     border-radius: var(--border-radius);
     font-weight: 600;
     transition: background 0.3s, transform 0.2s, color 0.3s;
+    margin: 10px;
 }
 
 .overlay a:hover {
