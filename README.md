@@ -1,38 +1,16 @@
-# Meu Portfólio Pessoal 
+# React + Vite
 
-## 🟩 Descrição  
-Meu portfólio pessoal desenvolvido para apresentar meus **projetos, habilidades e experiências** em desenvolvimento web e programação.  
-Interface clara, moderna e responsiva, projetada para demonstrar meu trabalho de forma profissional.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
----
+Currently, two official plugins are available:
 
-## 🟩 Tecnologias  
-- HTML5  
-- CSS3  
-- JavaScript  
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
----
+## React Compiler
 
-## 🟩 Funcionalidades  
-- Página inicial com informações pessoais  
-- Seção de projetos com links e descrições detalhadas  
-- Lista de habilidades e tecnologias que domino  
-- Contato via formulário ou links para redes/projetos  
-- Design responsivo, acessível e moderno  
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
----
+## Expanding the ESLint configuration
 
-## 🟩 Como rodar localmente
-
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/E-Danillo/danillo-portfolio.git
-2. Entre na pasta:
-   ```bash
-   cd danillo-portfolio
-3. Rode o projeto:
-    ```bash
-   Abra o arquivo index.html no navegador
-Ou Acesse:
-   https://e-danillo.github.io/danillo-portfolio/
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
