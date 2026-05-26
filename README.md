@@ -1,16 +1,86 @@
-# React + Vite
+# 🟢 Danillo Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio pessoal desenvolvido para apresentar meus projetos, habilidades e experiências na área de desenvolvimento web.
 
-Currently, two official plugins are available:
+🔗 **Acesse o projeto online:**  
+https://e-danillo.github.io/danillo-portfolio/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🟢 Sobre o projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Este projeto é meu portfólio pessoal, criado com foco em uma interface moderna, responsiva e organizada.  
+Nele apresento um pouco sobre mim, minhas principais habilidades, projetos desenvolvidos, serviços e formas de contato.
 
-## Expanding the ESLint configuration
+O objetivo é reunir meus trabalhos em um só lugar e mostrar minha evolução como desenvolvedor frontend.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🟢 Tecnologias utilizadas
+
+- React
+- JavaScript
+- CSS
+- HTML
+- Vite
+
+---
+
+## 🟢Funcionalidades
+
+- Página inicial com efeito de digitação
+- Seção sobre mim
+- Galeria de projetos
+- Botão para exibir mais projetos
+- Seção de serviços
+- Formulário de contato
+- Layout responsivo para celular, tablet e desktop
+- Menu mobile
+
+---
+
+## 🟢 Projetos apresentados
+
+Alguns projetos incluídos no portfólio:
+
+- **Dashboard Gamificado** — gerenciador de tarefas com XP, níveis e conquistas.
+- **Car Explorer** — aplicação que consome API pública para buscar modelos de veículos.
+- **Quebrando o Gelo e o Ovo** — plataforma de sugestão de receitas por ingredientes.
+- **Nezuma Motors** — site automotivo conceitual com foco visual premium.
+- **Relógio Dinâmico** — relógio em tempo real com mudanças visuais.
+- **Calculadora React** — calculadora funcional feita com React.
+- **To-do List** — lista de tarefas com persistência de dados.
+
+---
+
+## 🟢 Como executar o projeto
+
+Clone o repositório:
+git clone https://github.com/E-Danillo/danillo-portfolio.git
+
+Entre na pasta do projeto:
+cd danillo-portfolio
+
+Instale as dependências:
+npm install
+
+Execute o projeto em modo de desenvolvimento:
+npm run dev
+
+Para gerar a versão de produção:
+npm run build
+
+Para visualizar o build localmente:
+npm run preview
+
+🟢 Prévia
+
+![Prévia do portfólio](./public/portfolio.png)
+
+🟢 Autor
+
+Desenvolvido por Emerson Danillo.
+
+GitHub: https://github.com/E-Danillo
+LinkedIn: [link do LinkedIn](https://www.linkedin.com/in/emerson-danillo/)
+Email: danilloemerson0@gmail.com
