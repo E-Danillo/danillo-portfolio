@@ -75,7 +75,9 @@ npm run preview
 
 🟢 Prévia
 
-![Prévia do portfólio](./portfolio.png)
+![Prévia do portfólio]## 📸 Prévia
+
+![Prévia do portfólio](./public/portfolio.png)
 
 🟢 Autor
 
