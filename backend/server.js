@@ -4,9 +4,14 @@ require("dotenv").config();
 
 const app = express();
 
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://e-danillo.github.io"
+]
+
 app.use(cors({
-  origin: "http://localhost:5173"
-}));
+  origin: allowedOrigins
+}))
 
 app.use(express.json());
 

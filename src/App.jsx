@@ -64,8 +64,7 @@ function App() {
   }
 
   try {
-    const response = await fetch('http://localhost:3001/api/contact', {
-      method: 'POST',
+      const response = await fetch('https://danillo-portfolio-backend.onrender.com/api/contact', {      method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
