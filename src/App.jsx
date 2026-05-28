@@ -5,6 +5,7 @@ function App() {
   const [textoAtual, setTextoAtual] = useState('')
   const [quantidadeVisivel, setQuantidadeVisivel] = useState(4)
   const [menuAberto, setMenuAberto] = useState(false)
+  const [statusContato, setStatusContato] = useState('')
 
   const asset = (path) => `${import.meta.env.BASE_URL}${path}`
 
@@ -48,6 +49,43 @@ function App() {
   function alternarMenu() {
     setMenuAberto(!menuAberto)
   }
+
+  async function enviarContato(event) {
+  event.preventDefault()
+
+  setStatusContato('Enviando...')
+
+  const formData = new FormData(event.target)
+
+  const dados = {
+    name: formData.get('nome'),
+    email: formData.get('email'),
+    message: formData.get('mensagem')
+  }
+
+  try {
+    const response = await fetch('http://localhost:3001/api/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(dados)
+    })
+
+    const resultado = await response.json()
+
+    if (!response.ok) {
+      setStatusContato(resultado.error || 'Erro ao enviar mensagem.')
+      return
+    }
+
+    setStatusContato('Mensagem enviada com sucesso!')
+    event.target.reset()
+  } catch (error) {
+    console.error(error)
+    setStatusContato('Erro ao conectar com o servidor.')
+  }
+}
 
   return (
     <>
@@ -483,11 +521,10 @@ function App() {
             />
           </a>
 
-          <form
-            action="https://formspree.io/f/xdkwbqpe"
-            method="POST"
-            className="form-contato"
-          >
+            <form
+              onSubmit={enviarContato}
+              className="form-contato"
+            >
             <label htmlFor="nome">Nome</label>
             <input
               type="text"
@@ -519,6 +556,7 @@ function App() {
               <button type="submit" className="botao">Enviar</button>
               <button type="reset" className="botao">Limpar</button>
             </div>
+            {statusContato && <p>{statusContato}</p>}
           </form>
 
           <div className="redes">
